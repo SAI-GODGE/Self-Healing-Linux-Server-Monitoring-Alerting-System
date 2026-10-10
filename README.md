@@ -52,7 +52,6 @@ The project covers practical DevOps concepts such as Linux administration, shell
 
 ---
 ## 🏗️ Architecture
-## 🏗️ System Architecture
 
 The system has two workflows:
 
@@ -122,41 +121,7 @@ flowchart TB
 | 5 | Prometheus | Scrapes and stores metrics |
 | 6 | Grafana | Displays metrics in dashboards |
 
-**Note:** This architecture represents monitoring and alerting. Automatic recovery, such as restarting a failed service, should be shown as a separate step only if that functionality is implemented.
-
-             +----------------------------------+
-             |        Bash Monitoring Scripts   |
-             |                                  |
-             |  • disk_monitor.sh               |
-             |  • service_monitor.sh            |
-             |  • apache_monitor.sh             |
-             +----------------+-----------------+
-                              |
-                              |
-                       Runs Every 5 Minutes
-                          (Cron Job)
-                              |
-                              v
-                     System Health Checking
-                              |
-                  +-----------+------------+
-                  |                        |
-                  v                        v
-         Disk Usage Check          Service Status Check
-                  |                        |
-                  v                        v
-         Threshold Exceeded?        Service Stopped?
-                  |                        |
-                  +-----------+------------+
-                              |
-                              v
-                       Send Alert
-                              |
-             +----------------+----------------+
-             |                                 |
-             v                                 v
-     Telegram Notification              Email Notification
-
+---
 ## 📁 Project Structure
 
 ```
