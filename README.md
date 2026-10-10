@@ -53,6 +53,41 @@ The project covers practical DevOps concepts such as Linux administration, shell
 ---
 # 🏗 Project Architecture
 
+🏗️ Architecture
+
+flowchart TB
+    subgraph HOST["Linux Server — RHEL / CentOS"]
+        A["Bash Monitoring Scripts"]
+        B["Cron Scheduler"]
+        C["Disk Usage Checks"]
+        D["Service Health Checks"]
+        E["Node Exporter"]
+        B --> A
+        A --> C
+        A --> D
+    end
+
+    subgraph ALERTS["Notification System"]
+        F["Telegram Alerts"]
+        G["Email Alerts"]
+    end
+
+    subgraph STACK["Monitoring Stack"]
+        H["Prometheus"]
+        I["Grafana"]
+    end
+
+    C --> F
+    D --> F
+    C --> G
+    D --> G
+    E -->|System Metrics| H
+    H -->|Queries| I
+
+    style HOST fill:#172554,stroke:#60A5FA,color:#FFFFFF
+    style ALERTS fill:#3F1D2E,stroke:#F472B6,color:#FFFFFF
+    style STACK fill:#12352B,stroke:#34D399,color:#FFFFFF
+
                         +---------------------+
                         |     Linux Server    |
                         | (RHEL / CentOS VM)  |
