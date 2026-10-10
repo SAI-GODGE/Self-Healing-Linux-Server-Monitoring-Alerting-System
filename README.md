@@ -18,20 +18,12 @@
 </p>
 
 ## 📌 Project Overview
-This project implements an automated **Linux Server Monitoring System** using Bash scripting and open-source monitoring tools.  
-The system continuously monitors critical server resources and services, sends alerts when problems occur, and provides a visual monitoring dashboard.
 
-The solution integrates:
+The Self-Healing Linux Server Monitoring and Alerting System is a Linux-based project designed to automate server health checks, detect common operational issues, and provide visibility into system performance.
 
-- Bash monitoring scripts
-- Cron automation
-- Email Alerts
-- Telegram alerts
-- Prometheus metrics collection
-- Node Exporter system metrics
-- Grafana dashboards
+The project combines Bash monitoring scripts with scheduled execution, notification mechanisms, and an open-source monitoring stack. It helps identify disk-space problems and service failures while providing system metrics and visual dashboards.
 
-This project demonstrates **basic DevOps monitoring practices** used in real production environments.
+The project covers practical DevOps concepts such as Linux administration, shell scripting, task scheduling, monitoring, alerting, and troubleshooting.
 
 ---
 
