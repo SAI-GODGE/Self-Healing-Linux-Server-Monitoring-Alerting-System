@@ -51,49 +51,6 @@ The project covers practical DevOps concepts such as Linux administration, shell
 | <img src="https://cdn.simpleicons.org/gmail/EA4335" width="22" height="22" alt="Email"/> **Email** | Email notifications |
 
 ---
-
-# 🏗 Project Architecture
-
-# 🚀 Linux Server Monitoring & Alerting System
-
-## 📌 Project Overview
-This project implements an automated **Linux Server Monitoring System** using Bash scripting and open-source monitoring tools.  
-The system continuously monitors critical server resources and services, sends alerts when problems occur, and provides a visual monitoring dashboard.
-
-The solution integrates:
-
-- Bash monitoring scripts
-- Cron automation
-- Telegram alerts
-- Prometheus metrics collection
-- Node Exporter system metrics
-- Grafana dashboards
-
-This project demonstrates **basic DevOps monitoring practices** used in real production environments.
-
----
-
-# 🎯 Objectives
-- Monitor disk usage automatically
-- Detect service failures
-- Send instant alerts
-- Collect system metrics
-- Visualize server performance using dashboards
-
----
-
-# 🛠 Technologies Used
-
-- Linux (RHEL / CentOS)
-- Bash Scripting
-- Cron Jobs
-- Prometheus
-- Node Exporter
-- Grafana
-- Telegram Bot API
-
----
-
 # 🏗 Project Architecture
 
                         +---------------------+
