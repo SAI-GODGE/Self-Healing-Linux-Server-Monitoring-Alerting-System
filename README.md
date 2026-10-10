@@ -60,65 +60,65 @@ The system has two workflows:
 
 ```mermaid
 flowchart TB
+    SERVER["🖥️ Linux Server — RHEL / CentOS"]
 
-    subgraph SERVER["🖥️ Linux Server — RHEL / CentOS"]
-        direction TB
+    CRON["⏱️ Cron Scheduler"]
+    BASH["⚙️ Bash Monitoring Scripts"]
 
-        CRON["⏱️ Cron Scheduler"]
-        BASH["⚙️ Bash Monitoring Scripts"]
-
-        subgraph CHECKS["HEALTH CHECKS"]
-            direction LR
-            DISK["💾 Disk Usage Check"]
-            SERVICE["🔧 Service Health Check"]
-            NODE["📡 Node Exporter"]
-        end
-
-        CRON --> BASH
-        BASH --> DISK
-        BASH --> SERVICE
-    end
-
-    subgraph OBSERVABILITY["METRICS AND VISUALIZATION"]
+    subgraph CHECKS["HEALTH CHECKS"]
         direction LR
-        PROM["🔥 Prometheus"]
-        GRAFANA["📊 Grafana Dashboard"]
-        PROM --> GRAFANA
+        DISK["💾 Disk Usage Check"]
+        SERVICE["🔧 Service Health Check"]
+        NODE["🖥️ Node Exporter"]
     end
 
-    subgraph ALERTS["ALERTING AND NOTIFICATIONS"]
+    SERVER --> CRON
+    CRON --> BASH
+    BASH --> DISK
+    BASH --> SERVICE
+    BASH --> NODE
+
+    subgraph ALERTS["🔔 ALERTING AND NOTIFICATIONS"]
         direction LR
         TELEGRAM["✈️ Telegram Bot API"]
         EMAIL["📧 Email Alerts"]
     end
 
-    NODE -->|"System Metrics"| PROM
+    subgraph METRICS["📊 METRICS AND VISUALIZATION"]
+        direction LR
+        PROM["🔥 Prometheus"]
+        GRAFANA["📈 Grafana Dashboard"]
+        PROM --> GRAFANA
+    end
 
-    DISK -->|"High Disk Usage"| TELEGRAM
-    DISK -->|"High Disk Usage"| EMAIL
-    SERVICE -->|"Service Failure"| TELEGRAM
-    SERVICE -->|"Service Failure"| EMAIL
+    DISK -.->|"Threshold exceeded"| TELEGRAM
+    DISK -.->|"Threshold exceeded"| EMAIL
+    SERVICE -.->|"Service unavailable"| TELEGRAM
+    SERVICE -.->|"Service unavailable"| EMAIL
 
-    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF,stroke-width:2px
-    classDef engine fill:#172554,stroke:#818CF8,color:#FFFFFF,stroke-width:2px
-    classDef checks fill:#0F766E,stroke:#5EEAD4,color:#FFFFFF,stroke-width:2px
-    classDef exporter fill:#164E63,stroke:#22D3EE,color:#FFFFFF,stroke-width:2px
-    classDef prometheus fill:#FFF1E6,stroke:#F97316,color:#9A3412,stroke-width:2px
-    classDef grafana fill:#DCFCE7,stroke:#22C55E,color:#166534,stroke-width:2px
+    NODE -->|"System metrics"| PROM
+
+    classDef server fill:#0F172A,stroke:#38BDF8,color:#FFFFFF,stroke-width:3px
+    classDef scheduler fill:#DBEAFE,stroke:#3B82F6,color:#1E3A8A,stroke-width:2px
+    classDef scripts fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95,stroke-width:2px
+    classDef checks fill:#FEF3C7,stroke:#F59E0B,color:#78350F,stroke-width:2px
+    classDef exporter fill:#CCFBF1,stroke:#14B8A6,color:#134E4A,stroke-width:2px
     classDef alerts fill:#FCE7F3,stroke:#EC4899,color:#831843,stroke-width:2px
+    classDef prometheus fill:#FFEDD5,stroke:#F97316,color:#9A3412,stroke-width:2px
+    classDef grafana fill:#DCFCE7,stroke:#22C55E,color:#166534,stroke-width:2px
 
+    class SERVER server
     class CRON scheduler
-    class BASH engine
+    class BASH scripts
     class DISK,SERVICE checks
     class NODE exporter
+    class TELEGRAM,EMAIL alerts
     class PROM prometheus
     class GRAFANA grafana
-    class TELEGRAM,EMAIL alerts
 
-    style SERVER fill:#F8FAFC,stroke:#CBD5E1,color:#0F172A,stroke-width:2px
-    style CHECKS fill:#EFF6FF,stroke:#BFDBFE,color:#1E3A8A,stroke-width:1px
-    style OBSERVABILITY fill:#F0FDFA,stroke:#5EEAD4,color:#134E4A,stroke-width:2px
-    style ALERTS fill:#FDF2F8,stroke:#F9A8D4,color:#831843,stroke-width:2px
+    style CHECKS fill:#F8FAFC,stroke:#CBD5E1,color:#334155,stroke-width:2px
+    style ALERTS fill:#FFF1F2,stroke:#FDA4AF,color:#881337,stroke-width:2px
+    style METRICS fill:#ECFDF5,stroke:#6EE7B7,color:#064E3B,stroke-width:2px
 
     linkStyle default stroke:#64748B,stroke-width:1.5px
 ```
