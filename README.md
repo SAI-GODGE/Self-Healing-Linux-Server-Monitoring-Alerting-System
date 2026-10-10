@@ -51,79 +51,78 @@ The project covers practical DevOps concepts such as Linux administration, shell
 | <img src="https://cdn.simpleicons.org/gmail/EA4335" width="22" height="22" alt="Email"/> **Email** | Email notifications |
 
 ---
-# 🏗 Project Architecture
+## 🏗️ Architecture
+## 🏗️ System Architecture
 
-🏗️ Architecture
+The system has two workflows:
 
+- **Health checks and alerts:** Cron runs Bash scripts to check disk usage and service status. If a problem is detected, the scripts trigger Telegram or email notifications.
+- **Metrics and dashboards:** Node Exporter exposes Linux system metrics, Prometheus collects them, and Grafana displays them in dashboards.
+
+```mermaid
 flowchart TB
-    subgraph HOST["Linux Server — RHEL / CentOS"]
-        A["Bash Monitoring Scripts"]
-        B["Cron Scheduler"]
-        C["Disk Usage Checks"]
-        D["Service Health Checks"]
-        E["Node Exporter"]
-        B --> A
-        A --> C
-        A --> D
+    subgraph SERVER["🖥️ Linux Server — RHEL / CentOS"]
+        direction TB
+        CRON(["⏱️ Cron Scheduler"])
+        SCRIPTS["⚙️ Bash Monitoring Scripts"]
+        DISK["💾 Disk Usage Check"]
+        SERVICE["🔧 Service Health Check"]
+        NODE["📡 Node Exporter"]
+
+        CRON --> SCRIPTS
+        SCRIPTS --> DISK
+        SCRIPTS --> SERVICE
     end
 
-    subgraph ALERTS["Notification System"]
-        F["Telegram Alerts"]
-        G["Email Alerts"]
+    subgraph NOTIFY["🔔 Alerting Workflow"]
+        direction LR
+        TELEGRAM["✈️ Telegram Bot API"]
+        EMAIL["📧 Email Notifications"]
     end
 
-    subgraph STACK["Monitoring Stack"]
-        H["Prometheus"]
-        I["Grafana"]
+    subgraph MONITOR["📊 Metrics Monitoring Workflow"]
+        direction LR
+        PROM["🔥 Prometheus"]
+        GRAFANA["📈 Grafana Dashboard"]
+        PROM --> GRAFANA
     end
 
-    C --> F
-    D --> F
-    C --> G
-    D --> G
-    E -->|System Metrics| H
-    H -->|Queries| I
+    DISK -->|"Threshold exceeded"| TELEGRAM
+    SERVICE -->|"Service unavailable"| TELEGRAM
+    DISK -->|"Threshold exceeded"| EMAIL
+    SERVICE -->|"Service unavailable"| EMAIL
 
-    style HOST fill:#172554,stroke:#60A5FA,color:#FFFFFF
-    style ALERTS fill:#3F1D2E,stroke:#F472B6,color:#FFFFFF
-    style STACK fill:#12352B,stroke:#34D399,color:#FFFFFF
+    NODE -->|"System metrics"| PROM
 
-                        +---------------------+
-                        |     Linux Server    |
-                        | (RHEL / CentOS VM)  |
-                        +----------+----------+
-                                   |
-                                   |
-                    +--------------v--------------+
-                    |        Node Exporter        |
-                    |  (Collects System Metrics)  |
-                    |  CPU, RAM, Disk, Network    |
-                    +--------------+--------------+
-                                   |
-                                   |
-                        +----------v----------+
-                        |     Prometheus      |
-                        |  Metrics Collector  |
-                        |  & Time-Series DB   |
-                        +----------+----------+
-                                   |
-                        Scrapes Metrics
-                                   |
-                                   v
-                        +----------+----------+
-                        |       Grafana       |
-                        |  Monitoring &       |
-                        |  Visualization      |
-                        +----------+----------+
-                                   |
-                                   |
-                        Dashboards & Graphs
-                                   |
-                                   v
-                     System Performance Monitoring
+    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF
+    classDef scripts fill:#334155,stroke:#94A3B8,color:#FFFFFF
+    classDef checks fill:#854D0E,stroke:#FBBF24,color:#FFFFFF
+    classDef exporter fill:#115E59,stroke:#2DD4BF,color:#FFFFFF
+    classDef alerts fill:#831843,stroke:#F472B6,color:#FFFFFF
+    classDef monitoring fill:#7C2D12,stroke:#FB923C,color:#FFFFFF
+    classDef dashboard fill:#166534,stroke:#4ADE80,color:#FFFFFF
 
+    class CRON scheduler
+    class SCRIPTS scripts
+    class DISK,SERVICE checks
+    class NODE exporter
+    class TELEGRAM,EMAIL alerts
+    class PROM monitoring
+    class GRAFANA dashboard
+```
 
-------------------------------------------------------------
+### 🔄 Workflow Summary
+
+| Step | Component | What happens |
+|---|---|---|
+| 1 | Cron | Runs monitoring scripts at scheduled intervals |
+| 2 | Bash scripts | Check disk usage and service status |
+| 3 | Alerting | Sends notifications when configured checks fail |
+| 4 | Node Exporter | Exposes Linux system metrics |
+| 5 | Prometheus | Scrapes and stores metrics |
+| 6 | Grafana | Displays metrics in dashboards |
+
+**Note:** This architecture represents monitoring and alerting. Automatic recovery, such as restarting a failed service, should be shown as a separate step only if that functionality is implemented.
 
              +----------------------------------+
              |        Bash Monitoring Scripts   |
