@@ -108,6 +108,7 @@ flowchart TB
     class TELEGRAM,EMAIL alerts
     class PROM monitoring
     class GRAFANA dashboard
+
 ```
 
 ### 🔄 Workflow Summary
