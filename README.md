@@ -39,16 +39,15 @@ The project covers practical DevOps concepts such as Linux administration, shell
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
-|---|---|---|
-| 🐧 Operating System | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![Red Hat](https://img.shields.io/badge/RHEL-EE0000?style=flat-square&logo=redhat&logoColor=white) | Linux server environment |
-| 💻 Scripting | ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) | Automates disk and service checks |
-| ⏰ Scheduling | ![Cron](https://img.shields.io/badge/Cron-4479A1?style=flat-square&logo=linux&logoColor=white) | Runs monitoring scripts automatically |
-| 📡 Metrics Exporter | ![Node Exporter](https://img.shields.io/badge/Node%20Exporter-6B8E23?style=flat-square&logo=prometheus&logoColor=white) | Exposes Linux system metrics |
-| 📈 Monitoring | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) | Collects and stores system metrics |
-| 📊 Visualization | ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) | Displays metrics in dashboards |
-| ✈️ Notifications | ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white) | Sends alerts through a Telegram bot |
-| 📧 Email Alerts | ![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white) | Sends email notifications when configured |
-
+|---|---|
+| ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) **Linux (RHEL/CentOS)** | Operating system for the monitoring environment |
+| ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) **Bash** | Runs disk and service monitoring scripts |
+| ![Cron](https://img.shields.io/badge/Cron-4479A1?style=flat-square&logo=linux&logoColor=white) **Cron** | Executes monitoring scripts automatically |
+| ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) **Node Exporter** | Exposes Linux system metrics |
+| ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) **Prometheus** | Collects and stores system metrics |
+| ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) **Grafana** | Displays system metrics through dashboards |
+| ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white) **Telegram Bot API** | Sends monitoring alerts to Telegram |
+| ![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white) **Email** | Sends email notifications when configured |
 ---
 
 # 🏗 Project Architecture
