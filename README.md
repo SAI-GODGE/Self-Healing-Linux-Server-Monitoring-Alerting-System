@@ -1,5 +1,22 @@
 # 🚀 Self-Healing Linux Server Monitoring & Alerting System
 
+<p align="center">
+  <strong>Automated Linux Monitoring | Real-Time Alerts | Metrics Visualization</strong>
+</p>
+
+<p align="center">
+  A Linux monitoring project that combines Bash automation, Prometheus, Node Exporter, and Grafana to detect server health issues and improve operational visibility.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/OS-RHEL%20%7C%20CentOS-red?logo=redhat&logoColor=white" alt="Linux">
+  <img src="https://img.shields.io/badge/Scripting-Bash-4EAA25?logo=gnubash&logoColor=white" alt="Bash">
+  <img src="https://img.shields.io/badge/Monitoring-Prometheus-E6522C?logo=prometheus&logoColor=white" alt="Prometheus">
+  <img src="https://img.shields.io/badge/Metrics-Node%20Exporter-6B8E23" alt="Node Exporter">
+  <img src="https://img.shields.io/badge/Dashboards-Grafana-F46800?logo=grafana&logoColor=white" alt="Grafana">
+  <img src="https://img.shields.io/badge/Automation-Cron-blue" alt="Cron">
+</p>
+
 ## 📌 Project Overview
 This project implements an automated **Linux Server Monitoring System** using Bash scripting and open-source monitoring tools.  
 The system continuously monitors critical server resources and services, sends alerts when problems occur, and provides a visual monitoring dashboard.
