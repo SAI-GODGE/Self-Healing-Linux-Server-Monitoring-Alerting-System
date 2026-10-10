@@ -43,8 +43,8 @@ The project covers practical DevOps concepts such as Linux administration, shell
 |---|---|
 | <img src="https://cdn.simpleicons.org/linux/FCC624" width="22" height="22" alt="Linux"/> **Linux (RHEL/CentOS)** | Server operating system |
 | <img src="https://cdn.simpleicons.org/gnubash/4EAA25" width="22" height="22" alt="Bash"/> **Bash** | Monitoring scripts |
-| <img src="https://cdn.simpleicons.org/linux/2684FF" width="22" height="22" alt="Cron"/> **Cron** | Scheduled checks |
-| <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="22" height="22" alt="Node Exporter"/> **Node Exporter** | Exposes system metrics |
+| <img src="https://img.icons8.com/fluency/48/clock.png" width="22" height="22" alt="Cron"/> **Cron** | Scheduled checks |
+| <img src="https://img.icons8.com/fluency/48/server.png" width="22" height="22" alt="Node Exporter"/> **Node Exporter** | Exposes system metrics |
 | <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="22" height="22" alt="Prometheus"/> **Prometheus** | Metrics collection and storage |
 | <img src="https://cdn.simpleicons.org/grafana/F46800" width="22" height="22" alt="Grafana"/> **Grafana** | Monitoring dashboards |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22" height="22" alt="Telegram"/> **Telegram Bot API** | Instant alerts |
