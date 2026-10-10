@@ -28,11 +28,13 @@ The project covers practical DevOps concepts such as Linux administration, shell
 ---
 
 # 🎯 Objectives
-- Monitor disk usage automatically
-- Detect service failures
+- Automate disk-usage monitoring and threshold checks.
+- Detect stopped or unavailable system services.
 - Send instant alerts
-- Collect system metrics
-- Visualize server performance using dashboards
+- Collect Linux system metrics using Node Exporter.
+- Store and query metrics using Prometheus.
+- Visualize server performance through Grafana dashboards.
+- Reduce repetitive manual checks through scheduled automation.
 
 ---
 
