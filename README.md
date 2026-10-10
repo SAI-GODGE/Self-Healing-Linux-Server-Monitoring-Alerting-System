@@ -60,54 +60,67 @@ The system has two workflows:
 
 ```mermaid
 flowchart TB
+
     subgraph SERVER["🖥️ Linux Server — RHEL / CentOS"]
         direction TB
-        CRON(["⏱️ Cron Scheduler"])
-        SCRIPTS["⚙️ Bash Monitoring Scripts"]
-        DISK["💾 Disk Usage Check"]
-        SERVICE["🔧 Service Health Check"]
-        NODE["📡 Node Exporter"]
 
-        CRON --> SCRIPTS
-        SCRIPTS --> DISK
-        SCRIPTS --> SERVICE
+        CRON["⏱️ Cron Scheduler"]
+        BASH["⚙️ Bash Monitoring Scripts"]
+
+        subgraph CHECKS["HEALTH CHECKS"]
+            direction LR
+            DISK["💾 Disk Usage Check"]
+            SERVICE["🔧 Service Health Check"]
+            NODE["📡 Node Exporter"]
+        end
+
+        CRON --> BASH
+        BASH --> DISK
+        BASH --> SERVICE
     end
 
-    subgraph NOTIFY["🔔 Alerting Workflow"]
-        direction LR
-        TELEGRAM["✈️ Telegram Bot API"]
-        EMAIL["📧 Email Notifications"]
-    end
-
-    subgraph MONITOR["📊 Metrics Monitoring Workflow"]
+    subgraph OBSERVABILITY["METRICS AND VISUALIZATION"]
         direction LR
         PROM["🔥 Prometheus"]
-        GRAFANA["📈 Grafana Dashboard"]
+        GRAFANA["📊 Grafana Dashboard"]
         PROM --> GRAFANA
     end
 
-    DISK -->|"Threshold exceeded"| TELEGRAM
-    SERVICE -->|"Service unavailable"| TELEGRAM
-    DISK -->|"Threshold exceeded"| EMAIL
-    SERVICE -->|"Service unavailable"| EMAIL
+    subgraph ALERTS["ALERTING AND NOTIFICATIONS"]
+        direction LR
+        TELEGRAM["✈️ Telegram Bot API"]
+        EMAIL["📧 Email Alerts"]
+    end
 
-    NODE -->|"System metrics"| PROM
+    NODE -->|"System Metrics"| PROM
 
-    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF
-    classDef scripts fill:#334155,stroke:#94A3B8,color:#FFFFFF
-    classDef checks fill:#854D0E,stroke:#FBBF24,color:#FFFFFF
-    classDef exporter fill:#115E59,stroke:#2DD4BF,color:#FFFFFF
-    classDef alerts fill:#831843,stroke:#F472B6,color:#FFFFFF
-    classDef monitoring fill:#7C2D12,stroke:#FB923C,color:#FFFFFF
-    classDef dashboard fill:#166534,stroke:#4ADE80,color:#FFFFFF
+    DISK -->|"High Disk Usage"| TELEGRAM
+    DISK -->|"High Disk Usage"| EMAIL
+    SERVICE -->|"Service Failure"| TELEGRAM
+    SERVICE -->|"Service Failure"| EMAIL
+
+    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF,stroke-width:2px
+    classDef engine fill:#172554,stroke:#818CF8,color:#FFFFFF,stroke-width:2px
+    classDef checks fill:#0F766E,stroke:#5EEAD4,color:#FFFFFF,stroke-width:2px
+    classDef exporter fill:#164E63,stroke:#22D3EE,color:#FFFFFF,stroke-width:2px
+    classDef prometheus fill:#FFF1E6,stroke:#F97316,color:#9A3412,stroke-width:2px
+    classDef grafana fill:#DCFCE7,stroke:#22C55E,color:#166534,stroke-width:2px
+    classDef alerts fill:#FCE7F3,stroke:#EC4899,color:#831843,stroke-width:2px
 
     class CRON scheduler
-    class SCRIPTS scripts
+    class BASH engine
     class DISK,SERVICE checks
     class NODE exporter
+    class PROM prometheus
+    class GRAFANA grafana
     class TELEGRAM,EMAIL alerts
-    class PROM monitoring
-    class GRAFANA dashboard
+
+    style SERVER fill:#F8FAFC,stroke:#CBD5E1,color:#0F172A,stroke-width:2px
+    style CHECKS fill:#EFF6FF,stroke:#BFDBFE,color:#1E3A8A,stroke-width:1px
+    style OBSERVABILITY fill:#F0FDFA,stroke:#5EEAD4,color:#134E4A,stroke-width:2px
+    style ALERTS fill:#FDF2F8,stroke:#F9A8D4,color:#831843,stroke-width:2px
+
+    linkStyle default stroke:#64748B,stroke-width:1.5px
 ```
 
 ### 🔄 Workflow Summary
