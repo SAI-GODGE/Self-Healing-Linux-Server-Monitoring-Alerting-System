@@ -60,54 +60,84 @@ The system has two workflows:
 
 ```mermaid
 flowchart TB
-    subgraph SERVER["🖥️ Linux Server — RHEL / CentOS"]
+    %% =========================
+    %% LINUX SERVER
+    %% =========================
+    subgraph SERVER["🖥️ LINUX SERVER · RHEL / CENTOS"]
         direction TB
-        CRON(["⏱️ Cron Scheduler"])
-        SCRIPTS["⚙️ Bash Monitoring Scripts"]
-        DISK["💾 Disk Usage Check"]
-        SERVICE["🔧 Service Health Check"]
-        NODE["📡 Node Exporter"]
+
+        CRON(["⏱️ Cron Scheduler<br/>Every 10 Minutes"])
+        SCRIPTS["⚙️ Bash Monitoring Engine"]
+
+        subgraph CHECKS["HEALTH CHECKS"]
+            direction LR
+            DISK["💾 Disk Usage<br/>Threshold Check"]
+            SERVICE["🔧 Service Health<br/>Status Check"]
+        end
+
+        NODE["📡 Node Exporter<br/>System Metrics"]
 
         CRON --> SCRIPTS
         SCRIPTS --> DISK
         SCRIPTS --> SERVICE
     end
 
-    subgraph NOTIFY["🔔 Alerting Workflow"]
+    %% =========================
+    %% ALERTING
+    %% =========================
+    subgraph ALERTS["🔔 ALERTING AND NOTIFICATIONS"]
         direction LR
         TELEGRAM["✈️ Telegram Bot API"]
-        EMAIL["📧 Email Notifications"]
+        EMAIL["📧 Email Alerts"]
     end
 
-    subgraph MONITOR["📊 Metrics Monitoring Workflow"]
+    %% =========================
+    %% OBSERVABILITY
+    %% =========================
+    subgraph MONITORING["📊 METRICS AND VISUALIZATION"]
         direction LR
-        PROM["🔥 Prometheus"]
-        GRAFANA["📈 Grafana Dashboard"]
+        PROM["🔥 Prometheus<br/>Metrics Collection"]
+        GRAFANA["📈 Grafana<br/>Monitoring Dashboards"]
+
         PROM --> GRAFANA
     end
 
+    %% =========================
+    %% DATA AND ALERT FLOWS
+    %% =========================
     DISK -->|"Threshold exceeded"| TELEGRAM
-    SERVICE -->|"Service unavailable"| TELEGRAM
+    SERVICE -->|"Service stopped"| TELEGRAM
+
     DISK -->|"Threshold exceeded"| EMAIL
-    SERVICE -->|"Service unavailable"| EMAIL
+    SERVICE -->|"Service stopped"| EMAIL
 
-    NODE -->|"System metrics"| PROM
+    NODE -->|"CPU · RAM · Disk · Network"| PROM
 
-    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF
-    classDef scripts fill:#334155,stroke:#94A3B8,color:#FFFFFF
-    classDef checks fill:#854D0E,stroke:#FBBF24,color:#FFFFFF
-    classDef exporter fill:#115E59,stroke:#2DD4BF,color:#FFFFFF
-    classDef alerts fill:#831843,stroke:#F472B6,color:#FFFFFF
-    classDef monitoring fill:#7C2D12,stroke:#FB923C,color:#FFFFFF
-    classDef dashboard fill:#166534,stroke:#4ADE80,color:#FFFFFF
+    %% =========================
+    %% STYLING
+    %% =========================
+    classDef scheduler fill:#1D4ED8,stroke:#93C5FD,color:#FFFFFF,stroke-width:2px
+    classDef engine fill:#1E293B,stroke:#94A3B8,color:#FFFFFF,stroke-width:2px
+    classDef health fill:#78350F,stroke:#FBBF24,color:#FFFFFF,stroke-width:2px
+    classDef exporter fill:#134E4A,stroke:#5EEAD4,color:#FFFFFF,stroke-width:2px
+    classDef alert fill:#831843,stroke:#F9A8D4,color:#FFFFFF,stroke-width:2px
+    classDef prometheus fill:#7C2D12,stroke:#FDBA74,color:#FFFFFF,stroke-width:2px
+    classDef grafana fill:#14532D,stroke:#86EFAC,color:#FFFFFF,stroke-width:2px
 
     class CRON scheduler
-    class SCRIPTS scripts
-    class DISK,SERVICE checks
+    class SCRIPTS engine
+    class DISK,SERVICE health
     class NODE exporter
-    class TELEGRAM,EMAIL alerts
-    class PROM monitoring
-    class GRAFANA dashboard
+    class TELEGRAM,EMAIL alert
+    class PROM prometheus
+    class GRAFANA grafana
+
+    style SERVER fill:#0F172A,stroke:#64748B,color:#F8FAFC,stroke-width:2px
+    style CHECKS fill:#111827,stroke:#475569,color:#F8FAFC
+    style ALERTS fill:#1F1025,stroke:#C084FC,color:#F8FAFC,stroke-width:2px
+    style MONITORING fill:#0B1F33,stroke:#38BDF8,color:#F8FAFC,stroke-width:2px
+
+    linkStyle default stroke:#94A3B8,stroke-width:1.5px
 ```
 
 ### 🔄 Workflow Summary
