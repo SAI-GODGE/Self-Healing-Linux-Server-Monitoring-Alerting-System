@@ -60,67 +60,54 @@ The system has two workflows:
 
 ```mermaid
 flowchart TB
-    SERVER["🖥️ Linux Server — RHEL / CentOS"]
-
-    CRON["⏱️ Cron Scheduler"]
-    BASH["⚙️ Bash Monitoring Scripts"]
-
-    subgraph CHECKS["HEALTH CHECKS"]
-        direction LR
+    subgraph SERVER["🖥️ Linux Server — RHEL / CentOS"]
+        direction TB
+        CRON(["⏱️ Cron Scheduler"])
+        SCRIPTS["⚙️ Bash Monitoring Scripts"]
         DISK["💾 Disk Usage Check"]
         SERVICE["🔧 Service Health Check"]
-        NODE["🖥️ Node Exporter"]
+        NODE["📡 Node Exporter"]
+
+        CRON --> SCRIPTS
+        SCRIPTS --> DISK
+        SCRIPTS --> SERVICE
     end
 
-    SERVER --> CRON
-    CRON --> BASH
-    BASH --> DISK
-    BASH --> SERVICE
-    BASH --> NODE
-
-    subgraph ALERTS["🔔 ALERTING AND NOTIFICATIONS"]
+    subgraph NOTIFY["🔔 Alerting Workflow"]
         direction LR
         TELEGRAM["✈️ Telegram Bot API"]
-        EMAIL["📧 Email Alerts"]
+        EMAIL["📧 Email Notifications"]
     end
 
-    subgraph METRICS["📊 METRICS AND VISUALIZATION"]
+    subgraph MONITOR["📊 Metrics Monitoring Workflow"]
         direction LR
         PROM["🔥 Prometheus"]
         GRAFANA["📈 Grafana Dashboard"]
         PROM --> GRAFANA
     end
 
-    DISK -.->|"Threshold exceeded"| TELEGRAM
-    DISK -.->|"Threshold exceeded"| EMAIL
-    SERVICE -.->|"Service unavailable"| TELEGRAM
-    SERVICE -.->|"Service unavailable"| EMAIL
+    DISK -->|"Threshold exceeded"| TELEGRAM
+    SERVICE -->|"Service unavailable"| TELEGRAM
+    DISK -->|"Threshold exceeded"| EMAIL
+    SERVICE -->|"Service unavailable"| EMAIL
 
     NODE -->|"System metrics"| PROM
 
-    classDef server fill:#0F172A,stroke:#38BDF8,color:#FFFFFF,stroke-width:3px
-    classDef scheduler fill:#DBEAFE,stroke:#3B82F6,color:#1E3A8A,stroke-width:2px
-    classDef scripts fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95,stroke-width:2px
-    classDef checks fill:#FEF3C7,stroke:#F59E0B,color:#78350F,stroke-width:2px
-    classDef exporter fill:#CCFBF1,stroke:#14B8A6,color:#134E4A,stroke-width:2px
-    classDef alerts fill:#FCE7F3,stroke:#EC4899,color:#831843,stroke-width:2px
-    classDef prometheus fill:#FFEDD5,stroke:#F97316,color:#9A3412,stroke-width:2px
-    classDef grafana fill:#DCFCE7,stroke:#22C55E,color:#166534,stroke-width:2px
+    classDef scheduler fill:#1D4ED8,stroke:#60A5FA,color:#FFFFFF
+    classDef scripts fill:#334155,stroke:#94A3B8,color:#FFFFFF
+    classDef checks fill:#854D0E,stroke:#FBBF24,color:#FFFFFF
+    classDef exporter fill:#115E59,stroke:#2DD4BF,color:#FFFFFF
+    classDef alerts fill:#831843,stroke:#F472B6,color:#FFFFFF
+    classDef monitoring fill:#7C2D12,stroke:#FB923C,color:#FFFFFF
+    classDef dashboard fill:#166534,stroke:#4ADE80,color:#FFFFFF
 
-    class SERVER server
     class CRON scheduler
-    class BASH scripts
+    class SCRIPTS scripts
     class DISK,SERVICE checks
     class NODE exporter
     class TELEGRAM,EMAIL alerts
-    class PROM prometheus
-    class GRAFANA grafana
-
-    style CHECKS fill:#F8FAFC,stroke:#CBD5E1,color:#334155,stroke-width:2px
-    style ALERTS fill:#FFF1F2,stroke:#FDA4AF,color:#881337,stroke-width:2px
-    style METRICS fill:#ECFDF5,stroke:#6EE7B7,color:#064E3B,stroke-width:2px
-
-    linkStyle default stroke:#64748B,stroke-width:1.5px
+    class PROM monitoring
+    class GRAFANA dashboard
 ```
 
 ### 🔄 Workflow Summary
