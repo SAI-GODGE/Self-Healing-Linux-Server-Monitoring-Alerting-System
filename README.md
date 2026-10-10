@@ -1,4 +1,4 @@
-# 🚀 Self-Healing Linux Server Monitoring & Alerting System
+## 🚀 Self-Healing Linux Server Monitoring & Alerting System
 
 <p align="center">
   <strong>Automated Linux Monitoring | Real-Time Alerts | Metrics Visualization</strong>
