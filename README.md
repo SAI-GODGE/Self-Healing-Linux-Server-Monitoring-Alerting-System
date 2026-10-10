@@ -1,4 +1,4 @@
-<h1 align="center">🚀 Self-Healing Linux Server Monitoring and Alerting System</h1>
+<h1 align="center">📡 Self-Healing Linux Server Monitoring and Alerting System</h1>
 
 <p align="center">
   <strong>Automated Linux Monitoring | Real-Time Alerts | Metrics Visualization</strong>
