@@ -17,6 +17,7 @@
   <img src="https://img.shields.io/badge/Automation-Cron-blue" alt="Cron">
 </p>
 
+
 ## 📌 Overview
 The Self-Healing Linux Server Monitoring and Alerting System is a Linux-based project designed to automate server health checks, detect common operational issues, and provide visibility into system performance.
 
