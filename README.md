@@ -110,7 +110,6 @@ flowchart TB
     class GRAFANA dashboard
 
 ```
-
 ### 🔄 Workflow Summary
 
 | Step | Component | What happens |
