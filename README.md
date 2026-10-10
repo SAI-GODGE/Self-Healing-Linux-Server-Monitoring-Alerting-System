@@ -36,17 +36,6 @@ The project covers practical DevOps concepts such as Linux administration, shell
 - Reduce repetitive manual checks through scheduled automation.
 
 ---
-
-# 🛠 Technologies Used
-
-- Linux (RHEL / CentOS)
-- Bash Scripting
-- Cron Jobs
-- Prometheus
-- Node Exporter
-- Grafana
-- Telegram Bot API
-
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
