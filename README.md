@@ -18,13 +18,11 @@
 </p>
 
 ## 📌 Project Overview
-
 The Self-Healing Linux Server Monitoring and Alerting System is a Linux-based project designed to automate server health checks, detect common operational issues, and provide visibility into system performance.
 
 The project combines Bash monitoring scripts with scheduled execution, notification mechanisms, and an open-source monitoring stack. It helps identify disk-space problems and service failures while providing system metrics and visual dashboards.
 
 The project covers practical DevOps concepts such as Linux administration, shell scripting, task scheduling, monitoring, alerting, and troubleshooting.
-
 ---
 # 🎯 Objectives
 - Automate disk-usage monitoring and threshold checks.
