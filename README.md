@@ -36,18 +36,20 @@ The project covers practical DevOps concepts such as Linux administration, shell
 - Reduce repetitive manual checks through scheduled automation.
 
 ---
+
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) **Linux (RHEL/CentOS)** | Operating system for the monitoring environment |
-| ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) **Bash** | Runs disk and service monitoring scripts |
-| ![Cron](https://img.shields.io/badge/Cron-4479A1?style=flat-square&logo=linux&logoColor=white) **Cron** | Executes monitoring scripts automatically |
-| ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) **Node Exporter** | Exposes Linux system metrics |
-| ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) **Prometheus** | Collects and stores system metrics |
-| ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) **Grafana** | Displays system metrics through dashboards |
-| ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white) **Telegram Bot API** | Sends monitoring alerts to Telegram |
-| ![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white) **Email** | Sends email notifications when configured |
+| <img src="https://cdn.simpleicons.org/linux/FCC624" width="22" height="22" alt="Linux"/> **Linux (RHEL/CentOS)** | Server operating system |
+| <img src="https://cdn.simpleicons.org/gnubash/4EAA25" width="22" height="22" alt="Bash"/> **Bash** | Monitoring scripts |
+| <img src="https://cdn.simpleicons.org/linux/2684FF" width="22" height="22" alt="Cron"/> **Cron** | Scheduled checks |
+| <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="22" height="22" alt="Node Exporter"/> **Node Exporter** | Exposes system metrics |
+| <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="22" height="22" alt="Prometheus"/> **Prometheus** | Metrics collection and storage |
+| <img src="https://cdn.simpleicons.org/grafana/F46800" width="22" height="22" alt="Grafana"/> **Grafana** | Monitoring dashboards |
+| <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22" height="22" alt="Telegram"/> **Telegram Bot API** | Instant alerts |
+| <img src="https://cdn.simpleicons.org/gmail/EA4335" width="22" height="22" alt="Email"/> **Email** | Email notifications |
+
 ---
 
 # 🏗 Project Architecture
