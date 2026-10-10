@@ -47,6 +47,19 @@ The project covers practical DevOps concepts such as Linux administration, shell
 - Grafana
 - Telegram Bot API
 
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|---|
+| 🐧 Operating System | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![Red Hat](https://img.shields.io/badge/RHEL-EE0000?style=flat-square&logo=redhat&logoColor=white) | Linux server environment |
+| 💻 Scripting | ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) | Automates disk and service checks |
+| ⏰ Scheduling | ![Cron](https://img.shields.io/badge/Cron-4479A1?style=flat-square&logo=linux&logoColor=white) | Runs monitoring scripts automatically |
+| 📡 Metrics Exporter | ![Node Exporter](https://img.shields.io/badge/Node%20Exporter-6B8E23?style=flat-square&logo=prometheus&logoColor=white) | Exposes Linux system metrics |
+| 📈 Monitoring | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) | Collects and stores system metrics |
+| 📊 Visualization | ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) | Displays metrics in dashboards |
+| ✈️ Notifications | ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white) | Sends alerts through a Telegram bot |
+| 📧 Email Alerts | ![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white) | Sends email notifications when configured |
+
 ---
 
 # 🏗 Project Architecture
