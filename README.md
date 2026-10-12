@@ -236,7 +236,6 @@ Access Prometheus:
 http://localhost:9090
 
 ---
-
 ### Install Grafana
 
 ```bash
@@ -247,6 +246,7 @@ sudo systemctl start grafana-server
 Access Grafana:
 http://localhost:3000
 
+---
 ### Connect Prometheus to Grafana
 
 Open Grafana.
