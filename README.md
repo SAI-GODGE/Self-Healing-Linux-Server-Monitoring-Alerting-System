@@ -280,7 +280,7 @@ If Prometheus and Grafana run on separate hosts or in containers, configure the 
 
 ### Telegram Alert
 
-![Grafana Dashboard](Screenshots/Telegram_Alert.png)
+![Grafana Dashboard](Screenshots/Telegram_Alert.jpeg)
 
 ---
 
