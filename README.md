@@ -326,10 +326,8 @@ Configure a mail service or SMTP settings to receive email notifications.
 <p align="left">
   <a href="https://www.linkedin.com/in/tejaskanade15/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn" /></a>&nbsp; Tejas Kanade
   <br /><br />
-
   <a href="https://www.linkedin.com/in/saiprasad-godge-a4098727a/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn" /></a>&nbsp; Saiprasad Godge
   <br /><br />
-
   <a href="https://www.linkedin.com/in/omkar-ghongde-7b0504290/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn" /></a>&nbsp; Omkar Ghongde
 </p>
 
