@@ -47,7 +47,6 @@ The project covers practical DevOps concepts such as Linux administration, shell
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22" height="22" alt="Telegram"/> **Telegram Bot API** | Instant alerts |
 | <img src="https://cdn.simpleicons.org/gmail/EA4335" width="22" height="22" alt="Email"/> **Email** | Email notifications |
 
----
 ## 🏗️ Architecture
 
 The system has two workflows:
@@ -118,8 +117,6 @@ flowchart TB
 | 5 | Prometheus | Scrapes and stores metrics |
 | 6 | Grafana | Displays metrics in dashboards |
 
----
-
 ✨ Key Features
 
 <table>
@@ -154,8 +151,6 @@ flowchart TB
     </td>
   </tr>
 </table>
-
----
 
 ## 📁 Project Structure
 
