@@ -325,24 +325,23 @@ Configure a mail service or SMTP settings to receive email notifications.
 ## 👥 Meet the Team
 
 <p align="center">
-  <b>Tejas Kanade</b><br>
-  <a href="https://www.linkedin.com/in/TEJAS-tejaskanade15/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  <a href="https://www.linkedin.com/in/tejaskanade15/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="20" height="20" />
+    <b> Tejas Kanade</b>
   </a>
-  <br><br>
+  <br /><br />
 
-  <b>Saiprasad Godge</b><br>
-  <a href="https://www.linkedin.com/in/SAIPRASAD-saiprasad-godge/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  <a href="https://www.linkedin.com/in/saiprasad-godge-a4098727a/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="20" height="20" />
+    <b> Saiprasad Godge</b>
   </a>
-  <br><br>
+  <br /><br />
 
-  <b>Omkar Ghongde</b><br>
-  <a href="https://www.linkedin.com/in/OMKAR-omkar-ghongde/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  <a href="https://www.linkedin.com/in/omkar-ghongde-7b0504290/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="20" height="20" />
+    <b> Omkar Ghongde</b>
   </a>
 </p>
-
 
 ---
 
