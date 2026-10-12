@@ -326,19 +326,19 @@ Configure a mail service or SMTP settings to receive email notifications.
 
 <p align="center">
   <b>Tejas Kanade</b><br>
-  <a href="https://www.linkedin.com/in/TEJAS-LINKEDIN-USERNAME/" target="_blank">
+  <a href="https://www.linkedin.com/in/TEJAS-tejaskanade15/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
   </a>
   <br><br>
 
   <b>Saiprasad Godge</b><br>
-  <a href="https://www.linkedin.com/in/SAIPRASAD-LINKEDIN-USERNAME/" target="_blank">
+  <a href="https://www.linkedin.com/in/SAIPRASAD-saiprasad-godge/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
   </a>
   <br><br>
 
   <b>Omkar Ghongde</b><br>
-  <a href="https://www.linkedin.com/in/OMKAR-LINKEDIN-USERNAME/" target="_blank">
+  <a href="https://www.linkedin.com/in/OMKAR-omkar-ghongde/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
   </a>
 </p>
