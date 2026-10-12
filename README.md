@@ -25,7 +25,6 @@ The project combines Bash monitoring scripts with scheduled execution, notificat
 
 The project covers practical DevOps concepts such as Linux administration, shell scripting, task scheduling, monitoring, alerting, and troubleshooting.
 
----
 ## 🎯 Objectives
 - Automate disk-usage monitoring and threshold checks.
 - Detect stopped or unavailable system services.
