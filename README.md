@@ -285,9 +285,7 @@ If Prometheus and Grafana run on separate hosts or in containers, configure the 
 
 ![Email Alert](Screenshots/Email_Alert.jpeg)
 
----
-
-## 🔔 Alerting and Health Checks
+# 🔔 Alerting and Health Checks
 
 The monitoring scripts check disk usage and service status and send alerts when a problem is detected. Cron runs the scripts automatically, while Prometheus collects system metrics from Node Exporter.
 
@@ -298,27 +296,13 @@ The monitoring scripts check disk usage and service status and send alerts when 
 | ⏰ Cron Jobs | Runs scripts at scheduled intervals |
 | 📊 System Metrics | Prometheus collects metrics from Node Exporter |
 
-### 📲 Telegram Alerts
+### Telegram Alerts
 
 Configure a Telegram bot token and chat ID to receive alerts when an issue is detected.
 
-### 📧 Email Alerts
+### Email Alerts
 
 Configure a mail service or SMTP settings to receive email notifications.
-
----
-
-
-# 📈 Features
-
-✔ Disk space monitoring  
-✔ Service monitoring  
-✔ Telegram alerts & Email Alerts  
-✔ Automated cron execution  
-✔ Prometheus metrics collection  
-✔ Grafana monitoring dashboard
-
----
 
 ## 📌 Conclusion
 
