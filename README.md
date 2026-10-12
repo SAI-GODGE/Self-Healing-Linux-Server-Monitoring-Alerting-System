@@ -251,6 +251,22 @@ http://localhost:3000
 Add Prometheus as Data Source  
 Import Dashboard: **Node Exporter Full (ID: 1860)**
 
+4. Connect Prometheus to Grafana
+
+Open Grafana.
+
+Navigate to Connections → Data sources.
+
+Add Prometheus as a data source.
+
+Configure the Prometheus server URL, such as http://localhost:9090, when both services are accessible through the same host's loopback interface.
+
+Save and test the connection.
+
+Import the Node Exporter Full dashboard using dashboard ID 1860, or create your own dashboard.
+
+If Prometheus and Grafana run on separate hosts or in containers, configure the URL to match their actual network connectivity.
+
 ---
 
 
