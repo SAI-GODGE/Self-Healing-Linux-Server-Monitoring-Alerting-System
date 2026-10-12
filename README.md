@@ -322,16 +322,26 @@ Configure a mail service or SMTP settings to receive email notifications.
 - 🚀 Practical DevOps monitoring skills
 ---
 
-## 👥 Project Team
+## 👥 Meet the Team
 
-This project was developed collaboratively by:
+<p align="center">
+  <b>Tejas Kanade</b><br>
+  <a href="https://www.linkedin.com/in/TEJAS-LINKEDIN-USERNAME/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  </a>
+  <br><br>
 
-| Team Member | Connect on LinkedIn |
-|---|---|
-| **Tejas Kanade** | [LinkedIn Profile](https://www.linkedin.com/) |
-| **Saiprasad Godge** | [LinkedIn Profile](https://www.linkedin.com/) |
-| **Omkar Ghongde** | [LinkedIn Profile](https://www.linkedin.com/) |
+  <b>Saiprasad Godge</b><br>
+  <a href="https://www.linkedin.com/in/SAIPRASAD-LINKEDIN-USERNAME/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  </a>
+  <br><br>
 
+  <b>Omkar Ghongde</b><br>
+  <a href="https://www.linkedin.com/in/OMKAR-LINKEDIN-USERNAME/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="28" height="28">
+  </a>
+</p>
 
 
 ---
