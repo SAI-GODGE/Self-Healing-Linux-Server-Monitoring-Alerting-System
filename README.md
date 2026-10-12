@@ -122,6 +122,44 @@ flowchart TB
 | 6 | Grafana | Displays metrics in dashboards |
 
 ---
+
+✨ Key Features
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🖥️ System Monitoring</h3>
+      Automated checks for disk usage and service status.
+    </td>
+    <td width="50%">
+      <h3>🔔 Alert Notifications</h3>
+      Telegram and email notifications for configured conditions.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>📊 Metrics Visualization</h3>
+      Grafana dashboards powered by Prometheus metrics.
+    </td>
+    <td width="50%">
+      <h3>⚙️ Task Automation</h3>
+      Cron-based execution of monitoring scripts.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🐧 Linux Administration</h3>
+      Practical service management, filesystem monitoring, and troubleshooting.
+    </td>
+    <td width="50%">
+      <h3>📈 Operational Visibility</h3>
+      CPU, memory, disk, and network metrics exposed by Node Exporter.
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 📁 Project Structure
 
 ```
