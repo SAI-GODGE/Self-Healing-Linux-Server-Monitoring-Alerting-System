@@ -34,7 +34,6 @@ The project covers practical DevOps concepts such as Linux administration, shell
 - Visualize server performance through Grafana dashboards.
 - Reduce repetitive manual checks through scheduled automation.
 ---
-
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
