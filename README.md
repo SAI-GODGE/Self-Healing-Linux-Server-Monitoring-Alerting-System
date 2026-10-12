@@ -151,7 +151,7 @@ flowchart TB
 </table>
 
 ## 📂 Repository Structure
-
+```
 linux-server-monitoring/
 ├── README.md
 ├── .gitignore
@@ -165,6 +165,7 @@ linux-server-monitoring/
     ├── grafana-dashboard.png
     ├── node-exporter.png
     └── prometheus-ui.png
+```
 ---
 
 # ⚙ Installation & Setup
