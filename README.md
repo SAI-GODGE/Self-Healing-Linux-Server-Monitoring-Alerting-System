@@ -297,36 +297,42 @@ The monitoring scripts check disk usage and service status and send alerts when 
 | 📊 System Metrics | Prometheus collects metrics from Node Exporter |
 
 ### Telegram Alerts
-
 Configure a Telegram bot token and chat ID to receive alerts when an issue is detected.
 
 ### Email Alerts
-
 Configure a mail service or SMTP settings to receive email notifications.
 
-## 📌 Conclusion
+## 🔮 Future Improvements
 
-This project demonstrates automation, monitoring, and self-healing capabilities in Linux systems using open-source tools.
+- Add automatic service recovery with safety checks.
+- Integrate Prometheus alert rules and Alertmanager.
+- Make alert thresholds configurable.
+- Improve logging and error handling.
+- Add notification retries and secure monitoring endpoints.
+- Automate setup using Bash scripts or Ansible.
+- Test recovery scenarios and measure recovery time.
 
-By integrating Bash scripting with Prometheus, Node Exporter, and Grafana, the system ensures:
+## 📚 What This Project Demonstrates
 
-- Improved server uptime  
-- Reduced manual intervention  
-- Real-time monitoring and alerting  
-- Faster issue detection and recovery  
-
-The Self-Healing Linux Server enhances reliability and operational efficiency in Linux-based environments.
-
+- 🐧 Linux administration and service management
+- 💻 Bash scripting and Cron automation
+- 📊 System monitoring with Prometheus and Grafana
+- 🔔 Telegram and email alerting
+- 🔧 Troubleshooting and error handling
+- 🚀 Practical DevOps monitoring skills
 ---
 
-## 👨‍💻 Authors
+## 👥 Project Team
 
-**Tejas Kanade**  
-**Saiprasad Godge**  
-**Omkar Ghongde**  
+This project was developed collaboratively by:
 
-Major Project – Self-Healing Linux Server Monitoring & Alerting System
-B.Tech Computer Science
+| Team Member | Connect on LinkedIn |
+|---|---|
+| **Tejas Kanade** | [LinkedIn Profile](https://www.linkedin.com/) |
+| **Saiprasad Godge** | [LinkedIn Profile](https://www.linkedin.com/) |
+| **Omkar Ghongde** | [LinkedIn Profile](https://www.linkedin.com/) |
+
+
 
 ---
 
