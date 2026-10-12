@@ -263,7 +263,6 @@ http://localhost:3000
 
 If Prometheus and Grafana run on separate hosts or in containers, configure the URL to match their actual network connectivity.
 
----
 ## 📸 Screenshots
 
 ### Grafana Dashboard
@@ -288,24 +287,24 @@ If Prometheus and Grafana run on separate hosts or in containers, configure the 
 
 ---
 
-# 🔔 Alert System
+## 🔔 Alerting and Health Checks
 
-The monitoring scripts send alerts when:
+The monitoring scripts check disk usage and service status and send alerts when a problem is detected. Cron runs the scripts automatically, while Prometheus collects system metrics from Node Exporter.
 
-- Disk usage exceeds defined threshold
-- Important services stop running
+| Check | Action |
+|---|---|
+| 💾 Disk Usage | Alerts when disk usage exceeds the threshold |
+| ⚙️ Service Status | Alerts when a monitored service stops |
+| ⏰ Cron Jobs | Runs scripts at scheduled intervals |
+| 📊 System Metrics | Prometheus collects metrics from Node Exporter |
 
-Alerts are sent using:
+### 📲 Telegram Alerts
 
-- Telegram Bot notifications
-- Email Notifications
+Configure a Telegram bot token and chat ID to receive alerts when an issue is detected.
 
----
+### 📧 Email Alerts
 
-### Alerts are triggered when:
-
-- Disk usage exceeds defined threshold  
-- A monitored service stops running  
+Configure a mail service or SMTP settings to receive email notifications.
 
 ---
 
