@@ -170,7 +170,6 @@ linux-server-monitoring/
     ├── 📡 node-exporter.png
     └── 🔥 prometheus-ui.png
 ```
----
 ## ⚙ Installation & Setup
 
 ### 1️⃣ Clone Repository
@@ -200,7 +199,6 @@ Add monitoring task
 
 This runs monitoring every **10 minutes**.
 
----
 Verify the configuration:
 ```bash
 crontab -l
