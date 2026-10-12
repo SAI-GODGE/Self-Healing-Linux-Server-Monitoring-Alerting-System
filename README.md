@@ -320,7 +320,6 @@ Configure a mail service or SMTP settings to receive email notifications.
 - 🔔 Telegram and email alerting
 - 🔧 Troubleshooting and error handling
 - 🚀 Practical DevOps monitoring skills
----
 
 ## 👨‍💻 Authors
 
