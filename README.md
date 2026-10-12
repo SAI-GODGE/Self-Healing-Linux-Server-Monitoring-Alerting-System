@@ -264,7 +264,7 @@ http://localhost:3000
 If Prometheus and Grafana run on separate hosts or in containers, configure the URL to match their actual network connectivity.
 
 ---
-# 📸 Screenshots
+## 📸 Screenshots
 
 ### Grafana Dashboard
 
