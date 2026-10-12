@@ -244,14 +244,10 @@ sudo dnf install grafana -y
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
-
 Access Grafana:
 http://localhost:3000
 
-Add Prometheus as Data Source  
-Import Dashboard: **Node Exporter Full (ID: 1860)**
-
-4. Connect Prometheus to Grafana
+### Connect Prometheus to Grafana
 
 Open Grafana.
 
@@ -268,10 +264,6 @@ Import the Node Exporter Full dashboard using dashboard ID 1860, or create your 
 If Prometheus and Grafana run on separate hosts or in containers, configure the URL to match their actual network connectivity.
 
 ---
-
-
----
-
 # 📸 Screenshots
 
 ### Grafana Dashboard
