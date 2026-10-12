@@ -201,10 +201,19 @@ Add monitoring task
 This runs monitoring every **10 minutes**.
 
 ---
+Verify the configuration:
+```bash
+crontab -l
+```
+Inspect the monitoring log:
+```bash
+tail -f /home/its_sai/linux-server-monitoring/monitor.log
+```
+Ensure that the selected user has the required permissions and that the scripts work correctly in Cron's environment.
 
-# 📊 Monitoring Stack Setup
+## 📊 Monitoring Stack Setup
 
-## Install Node Exporter
+### Install Node Exporter
 
 ```bash
 sudo dnf install node_exporter -y
@@ -217,7 +226,7 @@ http://localhost:9100/metrics
 
 ---
 
-## Install Prometheus
+### Install Prometheus
 
 Configure `prometheus.yml`:
 
@@ -233,7 +242,7 @@ http://localhost:9090
 
 ---
 
-## Install Grafana
+### Install Grafana
 
 ```bash
 sudo dnf install grafana -y
