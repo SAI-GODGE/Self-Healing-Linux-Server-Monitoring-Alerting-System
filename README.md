@@ -322,7 +322,7 @@ Configure a mail service or SMTP settings to receive email notifications.
 - 🚀 Practical DevOps monitoring skills
 ---
 
-## 👥 Meet the Team
+## 👨‍💻 Authors
 
 <p align="left">
   <a href="https://www.linkedin.com/in/tejaskanade15/" target="_blank">
