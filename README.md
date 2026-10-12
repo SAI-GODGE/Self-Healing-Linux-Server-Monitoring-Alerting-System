@@ -150,28 +150,21 @@ flowchart TB
   </tr>
 </table>
 
-## 📁 Project Structure
+## 📂 Repository Structure
 
-```
 linux-server-monitoring/
-│
 ├── README.md
 ├── .gitignore
-│
 ├── disk_monitor.sh
 ├── disk_telegram_alert.sh
 ├── service_monitor.sh
 ├── apache_monitor.sh
-│
 ├── prometheus/
 │   └── prometheus.yml
-│
 └── Screenshots/
     ├── grafana-dashboard.png
     ├── node-exporter.png
     └── prometheus-ui.png
-```
-
 ---
 
 # ⚙ Installation & Setup
