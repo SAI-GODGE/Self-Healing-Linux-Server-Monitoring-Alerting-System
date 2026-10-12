@@ -196,7 +196,6 @@ Add monitoring task
 */10 * * * * /path/to/disk_monitor.sh >> /home/its_sai/linux-server-monitoring/monitor.log 2>&1
 */10 * * * * /path/to/service_monitor.sh >> /home/its_sai/linux-server-monitoring/monitor.log 2>&1
 ```
-
 This runs monitoring every **10 minutes**.
 
 Verify the configuration:
@@ -218,12 +217,10 @@ sudo dnf install node_exporter -y
 sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 ```
-
 Check in browser:
 http://localhost:9100/metrics
 
 ---
-
 ### Install Prometheus
 
 Configure `prometheus.yml`:
