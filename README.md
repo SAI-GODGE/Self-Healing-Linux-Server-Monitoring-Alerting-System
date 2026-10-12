@@ -171,7 +171,6 @@ linux-server-monitoring/
     └── 🔥 prometheus-ui.png
 ```
 ---
-
 # ⚙ Installation & Setup
 
 ## 1️⃣ Clone Repository
