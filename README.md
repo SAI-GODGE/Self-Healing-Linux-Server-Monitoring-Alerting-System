@@ -247,7 +247,7 @@ Access Grafana:
 http://localhost:3000
 
 ---
-### 4. Connect Prometheus to Grafana
+### Connect Prometheus to Grafana
 
 1. Open Grafana at `http://localhost:3000`.
 2. Go to **Connections → Data sources**.
@@ -259,9 +259,8 @@ http://localhost:3000
    ```
 
 5. Click **Save & test** to verify the connection.
-6. Import the [Node Exporter Full dashboard](https://grafana.com/grafana/dashboards/1860/) using dashboard ID `1860`, or create a custom dashboard.
+6. Import the Node Exporter Full dashboard using dashboard ID `1860`, or create a custom dashboard.
 
-**Note:** The URL `http://localhost:9090` works when Grafana can reach Prometheus through the same host's loopback interface. If they run on separate hosts or in containers, use a reachable hostname or IP address instead.
 If Prometheus and Grafana run on separate hosts or in containers, configure the URL to match their actual network connectivity.
 
 ---
