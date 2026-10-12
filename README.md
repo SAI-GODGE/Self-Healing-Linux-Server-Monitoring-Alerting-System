@@ -171,22 +171,22 @@ linux-server-monitoring/
     └── 🔥 prometheus-ui.png
 ```
 ---
-# ⚙ Installation & Setup
+## ⚙ Installation & Setup
 
-## 1️⃣ Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/SAI-GODGE/Major Project.git
 cd self-healing-linux-server
 ```
 
-# 2️⃣ Make Scripts Executable
+### 2️⃣ Make Scripts Executable
 
 ```bash
 chmod +x *.sh
 ```
 
-# 3️⃣ Setup Cron Job
+### 3️⃣ Setup Cron Job
 
 ```bash
 crontab -e
