@@ -104,10 +104,8 @@ flowchart TB
     class TELEGRAM,EMAIL alerts
     class PROM monitoring
     class GRAFANA dashboard
-
 ```
 ### 🔄 Workflow Summary
-
 | Step | Component | What happens |
 |---|---|---|
 | 1 | Cron | Runs monitoring scripts at scheduled intervals |
@@ -117,7 +115,7 @@ flowchart TB
 | 5 | Prometheus | Scrapes and stores metrics |
 | 6 | Grafana | Displays metrics in dashboards |
 
-✨ Key Features
+## ✨ Key Features
 
 <table>
   <tr>
