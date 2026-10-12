@@ -331,8 +331,6 @@ Configure a mail service or SMTP settings to receive email notifications.
   <a href="https://www.linkedin.com/in/omkar-ghongde-7b0504290/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20" alt="LinkedIn" /></a>&nbsp; Omkar Ghongde
 </p>
 
----
-
 
 
 
